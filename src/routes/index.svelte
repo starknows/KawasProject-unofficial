@@ -12,7 +12,13 @@
 
 <svelte:head>
 	<title>Kawas Project 周表</title>
-    <meta name="description" content="整理Kawas Project 四位藝人之周表">
+    <meta name="description" content="Kawas Project非官方DD網頁，提供周表快速預覽服務">
+    <meta property="og:site_name" content="Kawas Project 周表" />
+  	<meta property="og:type" content="website" />
+  	<meta property="og:title" content="周表一覽 | Kawas Project DD小工具" />
+  	<meta property="og:description" content="Kawas Project非官方DD網頁，提供周表快速預覽服務" />
+  	<meta property="og:url" content="https://starknows.github.io/KawasProject-unofficial/" />
+  	<meta property="og:image" content="https://starknows.github.io/KawasProject-unofficial/appImage.jpg" />
 </svelte:head>
 
 <svelte:window on:resize={setVh} on:orientationchange={setVh}/>
