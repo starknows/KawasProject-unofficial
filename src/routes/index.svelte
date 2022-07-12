@@ -10,6 +10,11 @@
     });
 </script>
 
+<svelte:head>
+	<title>Kawas Project 周表</title>
+    <meta name="description" content="整理Kawas Project 四位藝人之周表">
+</svelte:head>
+
 <svelte:window on:resize={setVh} on:orientationchange={setVh}/>
 
 <div class="list-wrapper flex-center">
