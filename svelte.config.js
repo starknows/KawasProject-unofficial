@@ -6,6 +6,7 @@ import sveltePreprocess from 'svelte-preprocess';
 const config = {
 	kit: {
 		adapter: adapter(),
+		appDir: 'app',
 		prerender: {
 			default: true
 		},
