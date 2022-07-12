@@ -8,6 +8,10 @@ const config = {
 		adapter: adapter(),
 		prerender: {
 			default: true
+		},
+		paths: {
+			assets: '',
+			base: process.env.NODE_ENV === 'production' ? '/KawasProject-unofficial' : ''
 		}
 	},
 	preprocess: sveltePreprocess()
