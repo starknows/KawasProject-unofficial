@@ -31,13 +31,19 @@
     {/if}
     {#each coverUnits as coverUnit}
         <div class="calendar-wrapper flex-center flex-col">
-            <div class="img-wrapper flex-center" style={`background: no-repeat center/cover url(${coverUnit.link});`}>
-                <img
-                    src={coverUnit.link}
-                    alt="youtube video img"
-                    on:click={() => lightboxContent = {type: 'image', content: coverUnit.link}}
-                />
-            </div>
+            {#if coverUnit.link}
+                <div class="img-wrapper flex-center" style={`background: no-repeat center/cover url(${coverUnit.link});`}>
+                    <img
+                        src={coverUnit.link}
+                        alt="youtube video img"
+                        on:click={() => lightboxContent = {type: 'image', content: coverUnit.link}}
+                    />
+                </div>
+            {:else}
+                <div class="img-wrapper flex-center">
+                    <span class="noData">暫無周表</span>
+                </div>
+            {/if}
             <div class="icon-wrapper flex-center">
                 <a href={coverUnit.youtube} target="_blanc">
                     <i class="fa-brands fa-youtube"></i>
@@ -68,6 +74,7 @@
     height: 100vh
     height: calc(var(--vh, 1vh) * 100)
     width: 100%
+    word-spacing: 0.1em
 .calendar-wrapper
     flex: 0 0 40%
     padding: 16px
@@ -95,6 +102,11 @@
         background: rgba(white, 0.3)
         backdrop-filter: blur(5px)
         z-index: 1
+span.noData
+    font-size: 2rem
+    color: #aaa
+    z-index: 2
+    word-spacing: 0.5em
 .icon-wrapper
     width: 100%
     height: 3rem

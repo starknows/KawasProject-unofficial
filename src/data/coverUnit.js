@@ -16,7 +16,7 @@ export default [
 	{
 		index: 2,
 		title: '珞芙 - Loffy -',
-		link: `https://i.ytimg.com/vi/---/maxresdefault.jpg`,
+		link: null,
 		youtube: 'https://www.youtube.com/channel/UCMfgazeLUP-xZ9VsqOV7RbA',
 		twitter: 'https://twitter.com/Kawas_Loffy'
 	},
